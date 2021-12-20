@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Temparature Converter</h2>
+<strong>Type a value and chose the method</strong><br>
+Input <input type="text" id="input"><br><br>
+<select id="method">
+    <option value="1">Celcius to Fahrenheit</option>
+    <option value="2">Fahrenheit to Celcius</option>
+</select>
+<button onclick="convert()">Convert</button>
+<p id="result"></p>
+
+<script>
+    let result = 0
+
+    function convert() {
+        let input = parseInt(document.getElementById('input').value)
+        let method = document.getElementById('method').value
+        if (method === "2") {
+            result = (input - 32) / 1.8
+        } else if (method === "1") {
+            result = input * 1.8 + 32
+        }
+        document.getElementById('result').innerHTML = result
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

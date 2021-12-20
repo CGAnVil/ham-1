@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minArray(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i]
+            }
+        }
+        return min
+    }
+
+    let length = parseInt(prompt('Nhập độ dài mảng'))
+    let arr1 = []
+    for (let i = 0; i < length; i++) {
+        arr1[i] = parseInt(prompt('Nhập phần tử mảng:'))
+    }
+    let min = minArray(arr1)
+    alert('Số nhỏ nhất trong mảng bạn vừa nhập là: ' + min)
+</script>
+</body>
+</html>
